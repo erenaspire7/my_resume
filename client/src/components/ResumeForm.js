@@ -26,7 +26,7 @@ const ResumeForm = (props) => {
       data: formDetails,
     });
 
-    alert(apiCall.data.status);
+    console.log(apiCall.data);
     props.mail(apiCall.data.status);
 
     // document.getElementById('contact-me').reset();
