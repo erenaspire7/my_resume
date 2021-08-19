@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.API_PORT || 3000
 
 const transporter = nodemailer.createTransport({
   host: 'smtp-mail.outlook.com',
