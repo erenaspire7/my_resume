@@ -19,7 +19,7 @@ const ResumeForm = (props) => {
 
     let apiCall = await AxiosClient.post('send_mail', formDetails)
 
-    alert(apiCall.data.status);
+    console.log(apiCall.data);
     props.mail(apiCall.data.status);
 
     // document.getElementById('contact-me').reset();
