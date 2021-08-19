@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Playfair+Display:wght@400;700&display=swap');
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+  background-color: #171717;
+}
+
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url('https://res.cloudinary.com/erenaspire7/image/upload/v1629313980/tyler-lastovich-d0Sl3AH8Tlg-unsplash_z6h8yl.jpg');
+}
+
+.modal-bg {
+  background-color: #252525;
+}
+
+.skills-bg {
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
