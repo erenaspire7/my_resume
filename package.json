@@ -7,7 +7,7 @@
     "install-api": "cd api && npm install",
     "server": "node api/server.js",
     "heroku-postbuild": "npm run install-client && npm run install-api",
-    "dev": "concurrently \"npm run server\" \"npm run start --prefix client\""
+    "dev": "NODE_ENV=development concurrently \"npm run server\" \"npm run start --prefix client\""
   },
   "keywords": [],
   "author": "",
