@@ -5,8 +5,8 @@
   "scripts": {
     "install-client": "cd client && npm install",
     "install-api": "cd api && npm install",
-    "install-app": "npm install",
     "server": "node api/server.js",
+    "heroku-postbuild": "npm run install-client && npm run install-api",
     "dev": "concurrently \"npm run server\" \"npm run start --prefix client\""
   },
   "keywords": [],
