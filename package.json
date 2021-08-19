@@ -5,8 +5,10 @@
   "scripts": {
     "install-client": "cd client && npm install",
     "install-api": "cd api && npm install",
+    "build": "npm run build --prefix client",
     "server": "node api/server.js",
-    "heroku-postbuild": "NODE_ENV=development npm run install-client && npm run install-api",
+    "heroku-postbuild": " npm run install-client && npm run install-api && npm run build",
+    "start": "concurrently \"npm run server\" \"npm run serve --prefix client\"",
     "dev": "concurrently \"npm run server\" \"npm run start --prefix client\""
   },
   "keywords": [],

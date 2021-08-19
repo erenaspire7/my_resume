@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 3000
 
 const transporter = nodemailer.createTransport({
   host: 'smtp-mail.outlook.com',
@@ -52,5 +52,5 @@ app.post('/api/send_mail', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log('API running on port 5000');
+  console.log(`API running on port ${PORT}`);
 });
