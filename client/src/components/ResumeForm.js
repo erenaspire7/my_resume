@@ -5,7 +5,8 @@ import {
   LogoGithub,
   LogoTwitter,
 } from '@styled-icons/ionicons-solid';
-import AxiosClient from './../api/AxiosClient';
+// import AxiosClient from './../api/AxiosClient';
+import axios from 'axios';
 
 const ResumeForm = (props) => {
   const sendMail = async (event) => {
@@ -17,7 +18,13 @@ const ResumeForm = (props) => {
 
     props.loading('loading');
 
-    let apiCall = await AxiosClient.post('send_mail', formDetails)
+    // let apiCall = await AxiosClient.post('send_mail', formDetails)
+
+    let apiCall = await axios({
+      method: 'POST',
+      url: '/api/send_mail',
+      data: formDetails,
+    });
 
     alert(apiCall.data.status);
     props.mail(apiCall.data.status);
